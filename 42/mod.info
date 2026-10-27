@@ -1,0 +1,12 @@
+name=Tactical Grid Inventory
+id=TacticalGridInventory
+author=loisov
+modversion=1.6.23
+versionMin=42.20.0
+description=Grid inventory inspired by Escape from Tarkov: items take space, rigs and backpacks have pockets, loot must be searched, gear is worn on slots around your character.
+icon=icon.png
+poster=poster.png
+loadModAfter=Viewpoint,ProjectViewpointQOL
+loadModBefore=NicksMoveableWorkstations
+javaJarFile=media/java/client/TGIViewpoint.jar
+javaPkgName=tgi.vpcompat

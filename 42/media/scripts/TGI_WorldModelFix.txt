@@ -1,0 +1,8 @@
+module Base
+{
+
+    item CigarettePack
+    {
+        WorldStaticModel = CigarettePack_Ground,
+    }
+}

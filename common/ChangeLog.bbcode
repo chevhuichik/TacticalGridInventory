@@ -1,0 +1,306 @@
+[alert_config]
+link1 = Ko-fi = https://steamcommunity.com/linkfilter/?u=https://ko-fi.com/loiscoffee,
+link2 = Workshop = https://steamcommunity.com/sharedfiles/filedetails/?id=3810674933,
+[/alert_config]
+
+[quote]
+Tactical Grid Inventory 1.6.23
+[/quote]
+[b]New[/b]
+- Drag a box from an empty cell to select several things (no Shift needed; Shift adds to the selection, a click on an empty cell clears it). A selected group dragged elsewhere keeps its layout when it fits there whole.
+- Reorder your bags: drag a bag's header onto another bag's header (a click still folds it). The order is kept.
+- Options for compatibility (Mod Options > Other): "Strict grid for other mods" (off: moves started by other mods go through, what does not fit waits in "does not fit"), "Drag into other mods' windows" (items reach a video deck, crafting slots and other mods' windows the vanilla way), "Vanilla inventory on errors" (the vanilla inventory takes over until restart if the window keeps failing).
+- "Big tooltip" option: item tooltips with bigger text (Boba194230).
+- Sandbox: grid cells per weight unit and a maximum of cells per container, for servers with raised container capacities.
+[b]Changes[/b]
+- The inventory opens with Tab by default (new installs; your own key stays).
+- A whole fish takes room by its own weight, from 2x1 for a small one to 5x2 for a big catfish (横刀断水).
+- Things marked unwanted are dimmed, like in the vanilla list (Laetri).
+- Radio, TV and video deck windows stay above a full-screen inventory, so VHS tapes can be put in.
+[b]Fixes[/b]
+- Viewpoint: no more error in the log from TGI_Compat_Viewpoint.lua:74 (1.6.22, taking with F).
+- No more error in the log when dragging over some windows in multiplayer (TGI_Drag.lua:109).
+- Moves started by other mods (Viewpoint, Open All Containers, auto loot) no longer fail with "Not enough room" (xKingShope, Аналитик титек).
+
+[quote]
+Tactical Grid Inventory 1.6.22
+[/quote]
+[b]Changes[/b]
+- The mod now comes with a LICENSE.txt: use it and put it in modpacks freely (as a Workshop link), but do not re-upload it or copy its code into other mods.
+[b]Fixes[/b]
+- Things that did not fit no longer go into a bag lying elsewhere (a backpack upstairs) or onto a square you just left; they are dropped at your feet (TiraboTurbos, Keith Tyler, Rock Skelly).
+- Settings and keys no longer reset after restarting the game (Donye).
+- Viewpoint: taking with F goes into the bag picked as the Ctrl+click target while it has room (Richard).
+- Game speed keys (pause, fast forward) work with the inventory open, and fast forward speeds up searching too (sychmil).
+- Shotgun shells and other rounds from mods stack; grass and hay tufts stack by 10 (AzraelSorrow, sychmil).
+- Reading magazines are no longer filed under ammo (TiraboTurbos).
+
+[quote]
+Tactical Grid Inventory 1.6.21
+[/quote]
+[b]New[/b]
+- On/off, stale, rotten, raw, burnt, wet, bloody and dirty show as small icons on the tile (they were plain coloured squares); the hotbar shows the food ones too.
+[b]Changes[/b]
+- Things of 4 cells and more never stack; pillows take 2x2.
+- With the new Icons3D set, icon turns made by hand for the old icons are reset (they would lie wrong on the new ones).
+[b]Fixes[/b]
+- Two inventory windows no longer show up at once (amazon_employee).
+- Things that do not fit go out together: logs untied from a bundle no longer move into the bag one by one with a pause after each; what the bags cannot take goes on the floor in one go (Luv).
+- A pot in your hands stays in your hands after adding an ingredient (it went to "does not fit" and then into the bag) (Luv).
+- Alt+click on something you do not carry takes it only when it fits; with full pockets it says there is no room instead of leaving it in "does not fit". Clothes and bags still go on as before.
+
+[quote]
+Tactical Grid Inventory 1.6.20
+[/quote]
+[b]New[/b]
+- The inventory rolls up to its title bar and back (arrow button next to the gear, or a double click on the bar), like the vanilla one; search and filters hide while it is rolled up, and it stays rolled up the next time you open it.
+- Four new themes: Bunker, Cabin, Hospital, Muldraugh night. Eight new colour sets: Toxic, Copper, Moss, Dusk, Slate, Ice, Wine, Hazard.
+- Animations (option, on by default): the inventory unrolls downward when it opens and rolls back up when it closes, bag windows fade in, things moved into a grid settle into their cell, the highlight under the mouse comes up softly.
+
+[b]Fixes[/b]
+- Opening a stack of keys no longer throws an error (The Index).
+- Taking something out of a bag on the floor with full pockets puts it into a bag you carry, or says there is no room; before, nothing happened (Luv).
+- Sauced Carts in multiplayer and hosted coop: a cart standing on the floor takes and gives things (Spyyre).
+- Furniture no longer turns invisible after placing it when Nicks Moveable Workstations is on (its hook was not updated for 42.21; TGI fixes the call).
+- A thing dropped on a chosen cell of the floor lands in that cell, not in the first free one.
+- A new theme or colour set shows at once in the open inventory, no need to reopen it.
+- Multiplayer: a thing moved to a chosen cell lands there (it went to the first free cell, and the arrive animation did not play).
+- The inventory key closes the open inventory again (a second press did nothing).
+- With a furniture cursor up (pick up, place, rotate), a click on a cabinet picks it up instead of opening it, and the cursor's keys reach the game while the inventory is open.
+
+[quote]
+Tactical Grid Inventory 1.6.19
+[/quote]
+[b]New[/b]
+- Option "No item search": containers show everything at once. In multiplayer only if the server allows it (new sandbox option "Players may turn search off").
+- "Books" filter.
+- Option to leave the keyboard to the game while the inventory is open.
+- Cell size up to 2.5x and 3x.
+- The Search button tooltip shows your search skill and what it gives.
+
+[b]Changes[/b]
+- Magazines no longer stack: each one has its own cell and shows its rounds.
+
+[b]Fixes[/b]
+- Multiplayer: search XP reaches the player (it stayed on the server).
+- Multiplayer: clicking the open world map no longer opens a container next to the character (thanks Deeman).
+- Things carried since opening go to your bags even when a world container is the Ctrl+click target.
+- Tents, sleeping bags and other furniture start the placement cursor and are not moved by the inventory meanwhile.
+- Animal carcasses are no longer dropped on the ground when taken.
+- Aiming works while the inventory is open.
+- No error spam while dragging a repair tool over some modded items, and no error on mouse press with some mod sets (TGI_Main.lua:277).
+- Sauced Carts: moving things in and out of carts (on the ground and pushed) checked and working.
+
+[quote]
+Tactical Grid Inventory 1.6.18
+[/quote]
+[b]New[/b]
+- Searching in first person with Viewpoint (built in, needs ZombieBuddy, which asks once to allow the TGI Java part). Unfound things are hidden in the Viewpoint loot menu, a "Search" line there opens the grid and starts searching, an unsearched container says "not searched" instead of "empty", containers locked by TGI show as locked.
+- Stacks open into a list (right click > Expand stack): one row per item, keys name the car they open. Drag a row to move just that item, double click takes it.
+- Things go back where they came from: when the game takes something out of a bag to use it (eat, smoke, read, craft), it returns to the same bag and spot afterwards. Option.
+- Tiles are coloured by what the thing is: weapons rust, medicine red, food olive, rounds brass, tools steel. By value (the old rarity colours) or no colour are options.
+- The mod's own font on all inventory text: Jura or Tektur, or the game font. Every language but Chinese, which keeps the game font.
+- Colour presets over any theme: graphite, olive drab, navy, desert, blood, arctic, night vision, rust, paper. New theme: Canvas.
+- Health figure redone: flat body plates tinted by health, the value on every part.
+- Modern style is flat everywhere: vitals and weight as dark plates with a thin bar (vitals in their own colour or grey-white), no gradients on the hotbar, quick slots and tooltips.
+- VHS tapes and discs that teach a skill get the skill book badge, and the tooltip names the skill.
+- Cell size up to 1.75x and 2x; headers, buttons and tile marks grow with it.
+- Tooltips warn about tainted water. Pens and other coloured items show their colour. The Pads slot has its own icon.
+- Ukrainian and French translations.
+
+[b]Changes[/b]
+- Things that don't fit your pockets (crafting, an opened box of nails) go into a bag you carry that has room, and only then on the floor. Things you already carried never go on the floor.
+- Car keys stack again, up to 10. Bandages stack by 5. Loose rounds take one cell per box (50 pistol, 20 rifle, 25 shells, modded calibres by their box); one cell for all of them is an option.
+- Searching gives more XP: every find teaches something. In multiplayer the server gives it, so it is kept.
+- Grey-white accent instead of gold, colour is left for states (blood, wear, wet, frozen). Thin grey leads to the gear slots.
+- Much less work per frame: several bag windows and hundreds of items no longer drop the frame rate as much.
+- No aiming while the mouse is over the inventory.
+- Clothes from mods with unknown body locations go to the slot that matches the body parts they cover.
+- Food that never spoils no longer says "Fresh". The tooltip shows how frozen food is. Attached items show a scroll bar when they don't all fit.
+
+[b]Fixes[/b]
+- Furniture (fridge, microwave, water cooler) can be placed again: putting it down starts the placement cursor like in vanilla, instead of dropping it flat on the floor.
+- Bag windows (a key ring, a pouch) stay above the inventory when you click into it, so you can drag between them again. A second double click closes the bag window.
+- Things no longer hang in "Does not fit" forever (a walkie-talkie, radios). Something that was in your hands is never thrown on the floor.
+- The loot column no longer jumps when a container appears or goes away above the one you look at (walking past a corpse or a mailbox).
+- A stack keeps its place when one of its items is used up. Nails, screws and other small things stack again.
+- Multiplayer: lockpicking a TGI lock is checked by the server with its own skill roll; a refused unlock no longer leaves the container open on your screen; equipping something from a bag lying in a container no longer freezes the character.
+- Quick slots pick the exact item, not another mod's item with the same name.
+- The tooltip no longer gives away which mushroom is poisonous before your character knows it.
+- The right click menu opens even when another mod's food breaks the vanilla menu, and bag windows no longer cover it.
+- Switching off "Replace the vanilla inventory" gives the vanilla inventory key back at once. The inventory key always opens the inventory.
+- The thawing bar moves while food stays in place. A pot or bottle on the ground shows how full it is.
+- Dragging another mod's window over a container no longer opens the inventory. No search XP error in the log with some mod sets.
+
+[quote]
+Tactical Grid Inventory 1.6.16
+[/quote]
+[b]New[/b]
+- Settings button (gear) in the inventory title bar: all client options right there, no need to dig through the mod list. Key bindings stay in the mod options.
+- Health figure has a switch in its corner: health / protection / insulation. Protection colours each body part by what your clothes give and shows bite / scratch numbers, the tooltip adds bullet protection and insulation.
+- Tooltips show how many grid cells a bag gives, and how many pocket cells a piece of clothing adds.
+- New colour theme: Dark.
+- Modern style (experimental, option): flat Tarkov-like tiles, cells and headers, ammo and condition as "30/30" on the tile, and its own font.
+- New gear slot "Pads" for knee and elbow pads.
+- The body part tooltip lists the clothes that cover that part.
+
+[b]Changes[/b]
+- A body part with no wound but low health is outlined in a calm colour and says it is healing, so it no longer looks like an injury.
+- Socks share one slot with shoes.
+- Things that do not fit go into the Ctrl+click target container first when it has room, and only then on the floor.
+- Sizes: bunny suit 2x2, bunny tail 1x1, a trash bag with things inside 3x3 (empty it stays folded).
+
+[b]Fixes[/b]
+- The Inventory button of the left sidebar opens the grid inventory.
+- Strict grid: furniture can be picked up and placed again, it is carried in the arms like in vanilla.
+- Viewpoint QOL: the mouse wheel over the inventory no longer zooms the camera.
+- Flipping through themes in the settings could show 0, -1, -2.
+- The right click menu is no longer hidden under a bag window.
+- Coveralls and other clothes from mods that rename body locations give pockets again (guessed from the item name).
+
+[quote]
+Tactical Grid Inventory 1.6.15
+[/quote]
+[b]New[/b]
+- Right click on a body part of the figure: treat it with the medicine you carry (bandage, disinfect, splint...), not only take a bandage off.
+- The action the character is doing (reading, crafting, reloading) shows as a bar in the inventory title bar.
+- Item tooltips show more: sharpness and head condition, weapon stats for tools you can hit with (crowbar, bat, hammer, axe), skill books with their levels and pages, endurance, fatigue, carbs / proteins / fat, poisonous and stale food, and the item's own description.
+- Strict grid: underwear gives a small 1x2 pocket, shirts have two pockets. With no pockets at all the grid says so.
+
+[b]Changes[/b]
+- Things that do not fit are put on the floor almost at once, not seconds later in the middle of a fight. Things picked up while the inventory was closed count too.
+- The Ko-fi button is gone from the window (it sat too close to the close button). The link stays on the mod page.
+- Underwear (boxers, briefs, bras) is shown in one "Underwear" slot.
+- Sizes: dry pasta 2x1, headphones 2x1, a full sandbag 2x3, coveralls 2x3.
+
+[b]Fixes[/b]
+- Strict grid: Take all into the inventory skipped the room check.
+- Putting an item into a bag on the floor threw the bag and the item on the floor.
+- Bottles show their weight with the liquid inside.
+- The click that closes a radial menu (gestures, reload) no longer opens the inventory.
+
+[quote]
+Tactical Grid Inventory 1.6.14
+[/quote]
+[b]New[/b]
+- Strict grid (option, on by default): your pockets and bags no longer grow past their grid. No free cell means you can't pick the item up. Pockets come only from clothes, so a naked character has none. Taking an item straight into your hands, putting clothes on, opening boxes and crafting still work. Things you already carry are never dropped: what no longer fits waits in the "Does not fit" strip. Turn the option off to get the old behaviour back.
+- "Put in" in the right click menu: puts the item into a pocket or a bag you carry or wear.
+- Raw food has a small dot on its tile and a "Raw" line in the tooltip. The dot is red if it is bad to eat raw. Burnt food is marked too.
+
+[b]Changes[/b]
+- Item sizes no longer change with what is inside or attached to an item.
+
+[b]Fixes[/b]
+- Viewpoint: with the inventory open the cursor no longer jumps to the middle of the screen over moodles and HUD icons.
+- A bag taken from the floor for a move goes back if the move is cancelled.
+- Sizes: guitar picks, tire repair kits, seat foam and book sets.
+
+[quote]
+Tactical Grid Inventory 1.6.13
+[/quote]
+[b]New[/b]
+- Pockets from clothes: trousers, a jacket, a shirt or a vest add labelled pockets under your usual ones (option, on by default).
+- Option "Drop what doesn't fit": turn it off and things that don't fit your grids wait next to the grid instead of going on the floor.
+
+[b]Changes[/b]
+- Mod options are grouped by topic: controls, look, grid, marks, gear, hotbar.
+
+[b]Fixes[/b]
+- VHS tapes, CDs and batteries can be dragged from the inventory into the radio / TV slot. Found and solved by Deeman!
+- No error when taking a radio out of a car dashboard.
+- No search XP error with some mod sets.
+- The "Doesn't fit" strip wraps into rows and shows every item, not only the first row.
+- Dragging worn clothes from a gear slot into your pockets takes them off.
+- Underwear no longer lights up the neck / ears slot.
+- Backpack side pockets stand next to the main compartment, and an overfilled backpack grows its main compartment, not a side pocket into a long column.
+- A very full bag window scrolls instead of running off the screen.
+- Big piles of loot (hundreds of items) open much faster, and many open bag windows draw faster.
+
+[quote]
+Tactical Grid Inventory 1.6.12
+[/quote]
+[b]Fixes[/b]
+- Key rings always take one cell, with or without keys inside. Before, a full key ring grew too big to fit anywhere.
+- When the inventory is too full, only items picked up after opening it are dropped, not things you already carried.
+- Dropping an item over an open bag window puts it in that bag, not in the grid behind it.
+- Dragging onto the hotbar no longer highlights two slots at once.
+- Viewpoint: closing the camera only closes the inventory it opened itself.
+- Multiplayer: picking a lock needs a bobby pin in your inventory, and breaking a lock needs a tool and being next to the container.
+- Multiplayer: only admins can edit item sizes for the whole server.
+- Less memory use over long sessions and smoother frames with many items.
+
+[quote]
+Tactical Grid Inventory 1.6.11
+[/quote]
+[b]New[/b]
+- Mouse wheel over the loot tabs switches containers.
+- Poultices can be applied from the 2D figure.
+
+[b]Fixes[/b]
+- Items worn by zombie corpses can be moved to your inventory.
+- Viewpoint: the cursor no longer sticks after dragging an item.
+- No error when reading a flier or a map.
+- Drinking from a quick slot works.
+- No error from the stash loot pool.
+- Items dragged from a vanilla window can be dropped on the grid.
+
+[quote]
+Tactical Grid Inventory 1.6.10
+[/quote]
+[b]New[/b]
+- Item tooltips show discomfort and vision impairment of gear.
+- Body cosmetics from other mods (custom faces, skins) are hidden from the gear list (option).
+
+[b]Fixes[/b]
+- Viewpoint: the HUD and other windows (TV, radio) can be clicked while the inventory is open. Found and solved by Deeman!
+
+[quote]
+Tactical Grid Inventory 1.6.9
+[/quote]
+[b]New[/b]
+- Full screen inventory option.
+- Right click a body part on the 2D figure to remove its bandage.
+
+[b]Fixes[/b]
+- The HUD and other windows (TV, radio) can be clicked while the inventory is open.
+- A right click menu and the stove / microwave settings close together with the inventory.
+
+[quote]
+Tactical Grid Inventory 1.6.8
+[/quote]
+[b]New[/b]
+- Shift+drag on an empty cell selects several items with a box.
+- Buttons in the title bar to hide the gear, your inventory or the loot (keys 1, 2, 3).
+- The loot part folds itself when there is nothing to loot nearby.
+- Search is a magnifier button that opens on click and folds back when empty.
+- Category filters can be combined.
+- Hints on the container header buttons.
+- Item size editor (off by default, turn it on in the options). Admins can set sizes for the whole server.
+- If an error touches the inventory, a small window offers a ready bug report and names the other mod involved.
+- Smooth interface option: the inventory is drawn every frame.
+
+[b]Changes[/b]
+- Scrollbar in the inventory style.
+- The 2D body is bigger and smoother.
+- Textures are loaded right after the game starts, so the first open no longer flickers.
+
+[b]Fixes[/b]
+- Proximity Inventory: items no longer show up twice.
+- The mouse wheel over the inventory no longer zooms the camera.
+- Hidden parts no longer flash on open and are kept after reloading the save.
+- The window no longer keeps following the cursor after dragging.
+- The protection against putting a bag inside itself now loads properly.
+
+[quote]
+Tactical Grid Inventory 1.6.7
+[/quote]
+[b]New[/b]
+- Cooking progress on food: thawing, cooking, and how close it is to burning.
+
+[b]Fixes[/b]
+- Frozen food in an oven now shows that it is warming up.
+- Item tooltips update while you hover (heat, cooking, condition).
+- A character stuck with raised hands after hanging an item on the hotbar gets unstuck.
+- Viewpoint: the mouse works in the stove and microwave panel.
+- Viewpoint QOL: the mouse wheel no longer zooms the camera while the inventory is open.
+- With a gamepad connected but playing with the mouse, items are no longer dropped at the old gamepad cursor spot.

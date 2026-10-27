@@ -1,0 +1,18 @@
+VERSION = 1,
+
+perk Searching
+{
+    parent = Survivalist,
+    translation = Searching,
+    passive = false,
+    xp1 = 30,
+    xp2 = 60,
+    xp3 = 110,
+    xp4 = 180,
+    xp5 = 280,
+    xp6 = 420,
+    xp7 = 600,
+    xp8 = 850,
+    xp9 = 1150,
+    xp10 = 1500,
+}

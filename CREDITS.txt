@@ -1,0 +1,17 @@
+Slot icons from https://game-icons.net — licensed CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/)
+head: brodie-helmet by skoll (game-icons.net, CC BY 3.0)
+face: gas-mask by skoll (game-icons.net, CC BY 3.0)
+torso: t-shirt by delapouite (game-icons.net, CC BY 3.0)
+armor: kevlar-vest by skoll (game-icons.net, CC BY 3.0)
+rig: chest-armor by delapouite (game-icons.net, CC BY 3.0)
+back: backpack by delapouite (game-icons.net, CC BY 3.0)
+belt: belt by lucasms (game-icons.net, CC BY 3.0)
+hands: gloves by delapouite (game-icons.net, CC BY 3.0)
+legs: trousers by lorc (game-icons.net, CC BY 3.0)
+feet: boots by lorc (game-icons.net, CC BY 3.0)
+primary: ak47 by skoll (game-icons.net, CC BY 3.0)
+secondary: glock by skoll (game-icons.net, CC BY 3.0)
+socks: barefoot by lorc (game-icons.net, CC BY 3.0)
+accessories: double-necklace by delapouite (game-icons.net, CC BY 3.0)
+grab (lorc), moncler-jacket, sleeveless-top (delapouite), swap-bag (lorc) - game-icons.net CC BY 3.0
+watch (delapouite) - game-icons.net CC BY 3.0
