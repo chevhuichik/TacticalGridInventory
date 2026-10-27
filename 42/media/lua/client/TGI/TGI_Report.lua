@@ -185,8 +185,9 @@ end
 local winErrs = {}
 function R.failSafe(err)
     if TGI.fallback or TGI.Options.get("failSafe") == false then return end
-    if not (string.find(err, "TGI_Window", 1, true) or string.find(err, "TGI_GridPanel", 1, true)
-        or string.find(err, "TGI_Draw", 1, true) or string.find(err, "TGI_Drag", 1, true)) then return end
+
+    local top = string.match(err, "Lua%(%(MOD:[^)]*%)%)%.[%w_]*%(([%w_]+)%.lua") or string.match(err, "%(([%w_]+)%.lua:%d+%)") or ""
+    if top ~= "TGI_Window" and top ~= "TGI_GridPanel" and top ~= "TGI_Draw" and top ~= "TGI_Drag" then return end
     local now = getTimestampMs()
     winErrs[#winErrs + 1] = now
     while winErrs[1] and now - winErrs[1] > 30000 do table.remove(winErrs, 1) end

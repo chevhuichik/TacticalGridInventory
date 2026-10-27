@@ -267,7 +267,8 @@ function S.of(item)
     if o then return o[1], o[2] end
     local isBag = instanceof(item, "InventoryContainer")
 
-    if safe(function() return item:hasTag("base:uncutfish") or item:hasTag("UncutFish") end, false) then
+    local fishTag = ItemTag and ItemTag.UNCUT_FISH
+    if fishTag and safe(function() return item:hasTag(fishTag) end, false) then
         local kg = safe(function() return item:getActualWeight() end, 0.4)
         if kg < 0.5 then return 2, 1 elseif kg < 1.5 then return 3, 1 elseif kg < 4 then return 3, 2
         elseif kg < 9 then return 4, 2 end

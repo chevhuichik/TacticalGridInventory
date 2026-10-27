@@ -2211,7 +2211,13 @@ end)
 local aboveTick = 0
 Events.OnTick.Add(function()
     aboveTick = aboveTick + 1
-    if aboveTick % 15 ~= 0 or not W.instance or not ISRadioWindow then return end
+    if aboveTick % 15 ~= 0 or not W.instance then return end
+
+    if W.instance.fullscreen then
+        pcall(function() local hb = getPlayerHotbar(W.instance.pn or 0); if hb and hb:isVisible() then hb:bringToTop() end end)
+        if TGI.Quick and TGI.Quick.inst then pcall(function() TGI.Quick.inst:bringToTop() end) end
+    end
+    if not ISRadioWindow then return end
     for _, list in ipairs({ ISRadioWindow.instances or {}, ISRadioWindow.instancesIso or {} }) do
         for _, rw in pairs(list) do
             if rw and rw.isVisible and rw:isVisible() then pcall(function() rw:bringToTop() end) end

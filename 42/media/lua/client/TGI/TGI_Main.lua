@@ -71,7 +71,16 @@ local function onKeyPressed(key)
         local p = getSpecificPlayer(0)
         if not TGI.usesGrid(0) then
 
-            if isInvKey and ISInventoryPage and ISInventoryPage.onKeyPressed then pcall(ISInventoryPage.onKeyPressed, key) end
+            if isInvKey and ISInventoryPage and ISInventoryPage.onKeyPressed then pcall(ISInventoryPage.onKeyPressed, key)
+            elseif TGI.fallback then
+
+                pcall(function()
+                    local inv, loot = getPlayerInventory(0), getPlayerLoot(0)
+                    local on = not (inv and inv:getIsVisible())
+                    if inv then inv:setVisible(on) end
+                    if loot then loot:setVisible(on) end
+                end)
+            end
             return
         end
         if p and not p:isDead() then TGI.Window.toggle(0) end
